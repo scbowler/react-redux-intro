@@ -1,6 +1,15 @@
+import types from './types';
+
 export function tick(){
-    console.log('TICK');
     return {
-        type: 'TICK'
+        type: types.TICK,
+        time: new Date().toLocaleTimeString()
+    }
+}
+
+export function setTextColor(color){
+    return {
+        type: types.SET_TEXT_COLOR,
+        color: color
     }
 }
